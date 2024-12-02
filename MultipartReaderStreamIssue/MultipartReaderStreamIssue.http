@@ -1,0 +1,11 @@
+@MultipartReaderStreamIssue_HostAddress = http://localhost:5205
+
+POST {{MultipartReaderStreamIssue_HostAddress}}/weatherforecast/
+Accept: application/json
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="123.zip"
+
+< ./123.zip
+--boundary
